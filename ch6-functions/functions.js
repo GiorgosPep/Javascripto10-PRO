@@ -93,3 +93,13 @@ const cube = n => {
 
 // Implicit return of object
 const createUser = (username, role) => ({ username: username, role: role });
+
+// Hoisting
+console.log(hello("Bob")); // Works due to hoisting
+
+function hello(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(hello2("Bob")); // Error: hello2 is not defined
+const hello2 = (name) =>  `Hello, ${name}!`
